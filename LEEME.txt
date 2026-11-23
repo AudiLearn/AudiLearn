@@ -1,0 +1,5 @@
+AudiLearn - versión web inicial
+
+Archivos: index.html, styles.css y script.js.
+Esta versión contiene la interfaz y las interacciones básicas. Todavía no procesa documentos ni genera audio con IA.
+No subir claves API a este repositorio público.

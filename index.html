@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AudiLearn | Cápsulas de audio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-icon">A</span><span>AudiLearn</span></div>
+      <p class="side-label">TU ESPACIO</p>
+      <a class="nav active" href="#">▦ &nbsp; Crear cápsula</a>
+      <a class="nav" href="#como-funciona">◷ &nbsp; Cómo funciona</a>
+      <div class="side-note">Convierte tus materiales de estudio en audio y aprovecha mejor tus trayectos.</div>
+      <div class="side-bottom">Aprende a tu ritmo.</div>
+    </aside>
+    <main>
+      <header><span>Tu espacio de aprendizaje</span><span class="tag">PROTOTIPO</span></header>
+      <section class="intro">
+        <div class="eyebrow">ESTUDIA ESCUCHANDO</div>
+        <h1>Transforma tus materiales<br>en <span>cápsulas de audio.</span></h1>
+        <p>Sube tus apuntes o pega tu texto. Personaliza cómo quieres que AudiLearn organice la información.</p>
+      </section>
+      <section class="workspace">
+        <div class="main-card">
+          <div class="section-heading"><span class="number">01</span><div><h2>Agrega tu material</h2><p>Selecciona un documento o pega tus apuntes.</p></div></div>
+          <label class="upload" for="fileInput">
+            <div class="upload-icon">↑</div>
+            <strong>Arrastra tu archivo aquí o <u>explora</u></strong>
+            <small>PDF, Word, PowerPoint o texto · Para esta demostración también puedes pegar texto abajo.</small>
+          </label>
+          <input id="fileInput" type="file" accept=".pdf,.doc,.docx,.ppt,.pptx,.txt" hidden>
+          <div id="fileName" class="file-name">Ningún archivo seleccionado</div>
+          <label class="field-label" for="sourceText">O pega aquí el contenido de tus apuntes</label>
+          <textarea id="sourceText" rows="5" placeholder="Pega un texto de clase, resumen o fragmento de lectura..."></textarea>
+          <div class="section-heading second"><span class="number">02</span><div><h2>Personaliza tu cápsula</h2><p>Elige el enfoque que mejor se adapte a tu objetivo.</p></div></div>
+          <div class="filters">
+            <label class="filter selected"><input type="radio" name="filter" value="jerarquia" checked><span class="filter-icon">✦</span><b>Por relevancia</b><small>Idea principal, ideas secundarias y datos de apoyo.</small></label>
+            <label class="filter"><input type="radio" name="filter" value="problema"><span class="filter-icon">↗</span><b>Problema-solución</b><small>Contexto, problema, propuesta y conclusión.</small></label>
+            <label class="filter"><input type="radio" name="filter" value="accion"><span class="filter-icon">✓</span><b>Por decisiones</b><small>Información clave, acuerdos y próximos pasos.</small></label>
+            <label class="filter"><input type="radio" name="filter" value="temas"><span class="filter-icon">▤</span><b>Por categorías</b><small>Organiza el contenido en temas relacionados.</small></label>
+          </div>
+          <div class="settings">
+            <div><label class="field-label" for="depth">Nivel de profundidad</label><select id="depth"><option>Breve</option><option selected>Intermedio</option><option>Detallado</option></select></div>
+            <div><label class="field-label" for="duration">Duración estimada</label><select id="duration"><option>3 minutos</option><option selected>5 minutos</option><option>10 minutos</option><option>15 minutos</option></select></div>
+          </div>
+          <label class="field-label" for="extra">Instrucciones adicionales (opcional)</label>
+          <input id="extra" class="text-input" placeholder="Ej. explica los conceptos con ejemplos sencillos">
+          <button id="prepare" class="primary">Preparar mi cápsula <span>→</span></button>
+          <p class="disclaimer">Esta versión inicial es una demostración de interfaz. La lectura automática de archivos y el análisis con IA se conectarán en una siguiente etapa.</p>
+        </div>
+        <aside class="preview-card">
+          <div class="preview-art"><div class="orb">♫</div><div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="preview-content"><span class="eyebrow">TU PRÓXIMA CÁPSULA</span><h3>Tu aprendizaje,<br>a tu ritmo.</h3><p>Configura tu material y personaliza la experiencia de escucha.</p><div class="preview-row"><span>Enfoque</span><b id="previewFilter">Por relevancia</b></div><div class="preview-row"><span>Profundidad</span><b id="previewDepth">Intermedio</b></div><div class="preview-row"><span>Duración</span><b id="previewDuration">5 minutos</b></div></div>
+        </aside>
+      </section>
+      <section id="como-funciona" class="how"><h2>Aprender también puede ser escuchar.</h2><p>AudiLearn busca convertir el tiempo de traslado en una oportunidad para repasar tus contenidos académicos.</p></section>
+      <footer>AudiLearn · Proyecto académico</footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
